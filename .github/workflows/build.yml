@@ -83,7 +83,7 @@ jobs:
   # Build MinIO + mc for all supported platforms.
   # Upload the built binaries + LICENSE + NOTICE files as an artifact for the buildx job.
   build_daily:
-    name: Daily MinIO + mc + console build for ${{ matrix.arch }}
+    name: Daily build for ${{ matrix.arch }}
     runs-on: ubuntu-latest
     needs:
       - version_and_tags
@@ -130,7 +130,7 @@ jobs:
   # If running on a push event, export the multiplatform image as an artifact for download.
   # If running as a scheduled, or manually triggered job, the buildx output will be lost.
   buildx_daily:
-    name: Daily multi-platform MinIO + mc + console image publishing
+    name: Daily multi-platform image publishing
     runs-on: ubuntu-latest
     needs:
       - version_and_tags
@@ -160,7 +160,7 @@ jobs:
         run: src/buildx.sh
 
   build_release:
-    name: MinIO + mc + console release build for ${{ matrix.arch }}
+    name: Release build for ${{ matrix.arch }}
     runs-on: ubuntu-latest
     needs:
       - version_and_tags
@@ -208,7 +208,7 @@ jobs:
   # If running on a push event, export the multiplatform image as an artifact for download.
   # If running as a scheduled, or manually triggered job, the buildx output will be lost.
   buildx_release:
-    name: Release multi-platform MinIO + mc + console image publishing
+    name: Release multi-platform image publishing
     runs-on: ubuntu-latest
     needs:
       - version_and_tags

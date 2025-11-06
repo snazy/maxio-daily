@@ -22,6 +22,11 @@ and open your browser at [http://127.0.0.1:9090](http://127.0.0.1:9090).
 
 ## Container Registries
 
+| Build            | Registry                                                                                           |
+|------------------|----------------------------------------------------------------------------------------------------|
+| Release          | [`ghcr.io/snazy/maxio-release`](https://github.com/snazy/maxio-daily/pkgs/container/maxio-release) |
+| Daily / Unstable | [`ghcr.io/snazy/maxio-daily`](https://github.com/snazy/maxio-daily/pkgs/container/maxio-daily)     |
+
 MinIO release builds including mc and OpenMaxIO object browser are published to
 [`ghcr.io/snazy/maxio-release`](https://github.com/snazy/maxio-daily/pkgs/container/maxio-release)
 Releases are tagged with the MinIO release tags, which start with `RELEASE.`.
