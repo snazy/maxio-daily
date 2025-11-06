@@ -103,10 +103,10 @@ See [Contributing to the project](CONTRIBUTING.md)
 This project is licensed under the [Apache License v2](./LICENSE) (SPDX: `Apache-2.0`).
 Code of the MinIO project is and will not be included in this repository.
 
-MinIO and therefore the images published via this project are licensed under the
+MinIO and the `mc` tool and therefore the images published via this project are licensed under the
 [GNU Affero General Public License v3.0](https://www.gnu.org/licenses/agpl-3.0.html) (SPDX: `AGPL-3.0`).
 
-Console, as a fork of the MinIO project, is licensed under the
+OpenMacIO object browser, as a fork of the MinIO project, is licensed under the
 [GNU Affero General Public License v3.0](https://www.gnu.org/licenses/agpl-3.0.html) (SPDX: `AGPL-3.0`).
 
 When using the published images, please make sure to comply with the AGPL3 license.
@@ -119,6 +119,6 @@ docker run \
   --interactive \
   --tty \
   --entrypoint /bin/bash \
-  ghcr.io/snazy/maxio-daily:latest
+  ghcr.io/snazy/maxio-release:latest
 ```
 and then list the files using `ls -al` and inspect those for example with `cat LICENSE.minio`.
